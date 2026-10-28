@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Controllers\Products;
+namespace App\Providers\Products;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Product;
 
-class index
+class Index
 {
-    public function Index ()
+    public function index()
     {
-        
-    }
+        $products = Product::all();
 
+        return $products->toArray();
+    }
 }
